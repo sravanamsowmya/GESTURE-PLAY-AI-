@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="glass-box demo-page-container">
+    <h1 class="demo-live-heading">Demo
+        Gesture Controls
+    </h1>
+    <p class="demo-live-subheading">Experience hands-free gaming with your webcam!</p>
+
+    <div class="demo-section-grid">
+        <div class="demo-game-card">
+            <span class="game-icon">🪨📄✂️</span>
+            <h4>Rock Paper Scissors</h4>
+            <p>Show ✊ (fist), ✋ (open palm), or ✌️ (two fingers) clearly in front of your camera. The AI detects your gesture and plays against you in real time.</p>
+        </div>
+        <div class="demo-game-card">
+            <span class="game-icon">❌⭕</span>
+            <h4>Tic Tac Toe</h4>
+            <p>Move your open palm to the desired tile block. Close your fist to place your mark (X).</p>
+        </div>
+        <div class="demo-game-card">
+            <span class="game-icon">🔢</span>
+            <h4>2048</h4>
+            <p>Use hand gestures showing 1, 2, 3, or 4 fingers to control the game board: 1 finger → Up, 2 fingers → Down, 3 fingers → Left, 4 fingers → Right.</p>
+        </div>
+    </div>
+
+    <h2 class="tested-games-heading">Tested Games</h2>
+    <p class="tested-games-subheading">Below are games that have been successfully tested for compatibility.</p>
+
+    <div class="demo-section-grid">
+        <div class="demo-game-card tested">
+            <span class="game-icon">🪨📄✂️</span>
+            <h4>Rock Paper Scissors</h4>
+            <p>Play the classic RPS game using real-time hand gestures.</p>
+            <span class="tested-badge">Tested</span>
+        </div>
+        <div class="demo-game-card tested">
+            <span class="game-icon">❌⭕</span>
+            <h4>Tic Tac Toe</h4>
+            <p>Navigate with open palm, place X with fist in this fun puzzle game.</p>
+            <span class="tested-badge">Tested</span>
+        </div>
+        <div class="demo-game-card tested">
+            <span class="game-icon">🔢</span>
+            <h4>2048</h4>
+            <p>Control the board with finger gestures (1-4) to merge tiles and score big!</p>
+            <span class="tested-badge">Tested</span>
+        </div>
+    </div>
+
+    <div class="demo-source-guide">
+        <h2 class="source-guide-heading">Want to run this on your machine?</h2>
+        <p class="source-guide-subheading">Get the complete source code and setup instructions.</p>
+        <a href="https://github.com/your-repo-link" target="_blank"><button class="view-repo-btn">View Repository</button></a>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="dashboard-title">Welcome to Gesture Play!</h1>
+<h3 class="dashboard-subtitle">Select a game to start playing using hand gestures:</h3>
+
+<div class="card-container">
+    <div class="card">
+        <h3>Rock Paper Scissors</h3>
+        <p>Play the classic RPS game using real-time hand gestures!</p>
+        <a href="{{ url_for('play_game', game='rps') }}"><button>Play Now</button></a>
+    </div>
+    <div class="card">
+        <h3>Tic Tac Toe</h3>
+        <p>Navigate with open palm, place X with fist in this fun puzzle game.</p>
+        <a href="{{ url_for('play_game', game='tictactoe') }}"><button>Play Now</button></a>
+    </div>
+    <div class="card">
+        <h3>2048</h3>
+        <p>Control the board with finger gestures (1-4) to merge tiles and score big!</p>
+        <a href="{{ url_for('play_game', game='2048') }}"><button>Play Now</button></a>
+    </div>
+</div>
+
+{# Updated section: How It Works and Technical Stack #}
+<div class="glass-box how-it-works-container">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-subtitle">Simple finger swipes control your favorite games</p>
+
+    <div class="how-it-works-grid">
+        <div class="how-it-works-column">
+            <h3>Gesture Controls</h3>
+            <div class="control-item">
+                <span class="control-icon">✊✋✌️</span>
+                <div class="control-text">
+                    <h4>Basic Gestures for RPS</h4>
+                    <p>Use fist, open palm, or two fingers for Rock Paper Scissors actions.</p>
+                </div>
+            </div>
+            <div class="control-item">
+                <span class="control-icon">🖐️✖️</span>
+                <div class="control-text">
+                    <h4>Navigation & Selection for Tic Tac Toe</h4>
+                    <p>Move open palm to navigate and close fist to place your mark (X).</p>
+                </div>
+            </div>
+            <div class="control-item">
+                <span class="control-icon">👆👇👈👉</span>
+                <div class="control-text">
+                    <h4>Directional Control for 2048</h4>
+                    <p>Use 1, 2, 3, or 4 fingers for Up, Down, Left, or Right movements.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-it-works-column">
+            <h3>Technical Stack</h3>
+            <div class="tech-item">
+                <h4>Core Development</h4>
+                <p><strong>Python</strong> – core language for back-end logic, and <strong>Flask</strong> – lightweight web framework.</p>
+            </div>
+            <div class="tech-item">
+                <h4>Computer Vision & Automation</h4>
+                <p><strong>OpenCV</strong> – real-time image processing, <strong>MediaPipe</strong> – advanced hand gesture detection, and <strong>PyAutoGUI</strong> – input automation.</p>
+            </div>
+            <div class="tech-item">
+                <h4>Frontend & Data Management</h4>
+                <p><strong>HTML & CSS</strong> – web design and layout, and <strong>SQLite</strong> – user authentication system.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

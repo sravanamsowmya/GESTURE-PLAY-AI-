@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture Play AI</title> {# Updated title #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="site-logo">
+                <span>Gesture Play AI</span> {# Updated text #}
+            </div>
+            <div class="nav-links-group">
+                <a href="{{ url_for('dashboard') }}">Home</a>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('demo') }}">Demo</a>
+                <a href="{{ url_for('technologies') }}">Technologies</a>
+                <a href="{{ url_for('contact') }}">Help / Contact</a>
+            </div>
+            <a href="{{ url_for('logout') }}" class="nav-login-btn">Login</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        &copy; 2025 Gesture Play. All rights reserved.
+    </footer>
+</body>
+</html>

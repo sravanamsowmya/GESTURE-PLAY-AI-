@@ -1,0 +1,1078 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+header nav {
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-logo {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #8be4f7;
+    text-shadow: 0 0 10px rgba(139, 228, 247, 0.4);
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.site-logo:hover {
+    text-shadow: 0 0 15px rgba(139, 228, 247, 0.6);
+    transform: scale(1.02);
+}
+
+.nav-links-group {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+header nav a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #8be4f7;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+header nav a:hover {
+    color: #8be4f7;
+    transform: scale(1.05);
+}
+
+/* Navigation Bar Login Button Style */
+.nav-login-btn {
+    padding: 8px 20px;
+    background: linear-gradient(135deg, #8be4f7, #6fb3f9);
+    border-radius: 25px;
+    color: #ffffff !important;
+    font-weight: 600;
+    text-decoration: none !important;
+    box-shadow: 0 3px 8px rgba(139, 228, 247, 0.2);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.nav-login-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(139, 228, 247, 0.4);
+    color: #ffffff !important;
+    &::after {
+        width: 0 !important;
+    }
+}
+
+header nav a.nav-login-btn::after {
+    width: 0 !important;
+}
+
+/* Main Content Area */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Cards on Dashboard */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(139, 228, 247, 0.3);
+}
+
+.card h3 {
+    color: #8be4f7;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #f1f1f1;
+    font-size: 0.95rem;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, #8be4f7, #6fb3f9);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(139, 228, 247, 0.25);
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 15px rgba(139, 228, 247, 0.4);
+}
+
+/* Glass Effect for Boxes */
+.glass-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    max-width: 800px;
+    color: #f5f5f5;
+    animation: fadeIn 1.5s;
+    box-sizing: border-box;
+}
+
+.glass-box h1, .glass-box h2 {
+    color: #8be4f7;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+input {
+    width: 300px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+    outline: none;
+    transition: all 0.3s;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 8px #8be4f7;
+}
+
+/* Error Messages */
+.error {
+    color: #ff6b6b;
+    font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+a {
+    color: #8be4f7;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #6fb3f9;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    main {
+        padding: 30px 10px;
+    }
+
+    main h1 {
+        font-size: 2.5rem;
+    }
+
+    main h3 {
+        font-size: 1.2rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .site-logo {
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+
+    .nav-links-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-login-btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+}
+/* Centering the login box */
+.login-box {
+    max-width: 400px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Centered Title */
+.centered-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #8be4f7;
+}
+
+/* Signup Text Styling */
+.signup-text {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.signup-text a {
+    color: #8be4f7;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.signup-text a:hover {
+    color: #6fb3f9;
+    text-decoration: underline;
+}
+
+/* About Page Specific - Refined */
+.about-content-box {
+    max-width: 700px; /* Consistent with other content boxes */
+    height: auto; /* Allow height to adjust based on content */
+    margin: 80px auto; /* Center the box on the page */
+    padding: 40px; /* Generous padding for content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content if box has extra space */
+    text-align: center; /* Center text content */
+    background: rgba(255, 255, 255, 0.08); /* Slightly more transparent glass background */
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Reduced shadow intensity */
+    border: 2px solid rgba(255, 255, 255, 0.15); /* Softer border */
+    animation: fadeIn 1.5s ease-out; /* Fade-in animation */
+    box-sizing: border-box; /* Include padding in width/height calculation */
+}
+
+.about-content-box h1 {
+    color: #8be4f7; /* Softer blue for the main title */
+    font-size: 3rem; /* Prominent font size */
+    margin-bottom: 25px; /* Space below the heading */
+    text-shadow: 0 0 12px rgba(139, 228, 247, 0.5); /* Softened glow */
+    letter-spacing: 1px;
+}
+
+.about-content-box p {
+    color: #f1f1f1; /* Light grey for body text */
+    font-size: 1.1rem; /* Readable font size */
+    line-height: 1.8; /* Increased line height for readability */
+    margin-bottom: 15px; /* Space between paragraphs */
+    text-align: center; /* Ensure paragraphs are centered */
+    max-width: 600px; /* Constrain paragraph width for better readability */
+    margin-left: auto; /* Center paragraph within its container */
+    margin-right: auto;
+}
+
+/* Responsive fallback for smaller screens for the about box */
+@media (max-width: 768px) {
+    .about-content-box {
+        width: 90%;
+        padding: 30px 20px;
+        margin: 50px auto;
+    }
+
+    .about-content-box h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-content-box p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+/* Technologies Page Specific Styles */
+.technologies-container {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    box-sizing: border-box;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.technologies-container h1 {
+    color: #8be4f7;
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(139, 228, 247, 0.4);
+    letter-spacing: 1px;
+}
+
+.technologies-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #f1f1f1;
+}
+
+.technologies-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+.technologies-list li:hover {
+    color: #ffffff;
+    transform: translateX(8px);
+    background-color: rgba(139, 228, 247, 0.08);
+    box-shadow: 0 0 8px rgba(139, 228, 247, 0.15);
+}
+
+.technologies-list li::before {
+    content: '🔹';
+    color: #8be4f7;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+}
+
+.technologies-list strong {
+    color: #6fb3f9;
+    font-weight: 600;
+}
+
+/* Responsive adjustments for Technologies page */
+@media (max-width: 768px) {
+    .technologies-container {
+        padding: 30px 20px;
+        margin: 50px auto;
+    }
+
+    .technologies-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .technologies-list {
+        font-size: 1rem;
+    }
+
+    .technologies-list li {
+        padding-left: 25px;
+        margin-bottom: 8px;
+    }
+
+    .technologies-list li::before {
+        font-size: 1.1em;
+    }
+}
+/* Help/Contact Page - FAQ Section Styles */
+.faq-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+}
+
+.faq-title {
+    color: #8be4f7; /* Adjusted: Softer blue */
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(139, 228, 247, 0.5); /* Adjusted: Softer glow */
+    animation: fadeIn 1.5s;
+}
+
+.faq-item {
+    display: flex; /* This is crucial for side-by-side number and content */
+    align-items: flex-start;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(139, 228, 247, 0.3); /* Adjusted: Softer glow */
+}
+
+.faq-number {
+    flex-shrink: 0; /* Ensures the number doesn't get squeezed */
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #8be4f7, #6fb3f9); /* Adjusted: Softer gradient */
+    border-radius: 50%; /* Makes it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1d2671; /* Dark text for contrast */
+    font-size: 1.6rem;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(139, 228, 247, 0.4); /* Adjusted: Softer shadow */
+}
+
+.faq-content {
+    flex-grow: 1;
+    text-align: center; /* Ensures the text content is centered within its part of the item */
+}
+
+.faq-content h3 {
+    color: #8be4f7; /* Adjusted: Softer blue */
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.faq-content p {
+    color: #f1f1f1;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+/* ... rest of your CSS ... */
+
+/* Technologies Page Specific Styles */
+.technologies-container {
+    max-width: 700px; /* Adjust width as needed */
+    margin: 80px auto; /* Center it, similar to demo-box */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center; /* Center the title and content */
+    box-sizing: border-box;
+    animation: fadeIn 1.5s ease-out; /* Add fade-in animation */
+}
+
+.technologies-container h1 {
+    color: #00f2fe; /* Bright blue for the main title */
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5); /* Subtle glow */
+    letter-spacing: 1px;
+}
+
+.technologies-list {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Align list items to the left */
+    font-size: 1.1rem;
+    line-height: 1.8; /* Increased line height for readability */
+    color: #f1f1f1; /* Light grey text */
+}
+
+.technologies-list li {
+    position: relative;
+    padding-left: 30px; /* Space for custom bullet */
+    margin-bottom: 10px; /* Space between list items */
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+    padding-top: 5px; /* Added slight vertical padding for hover effect */
+    padding-bottom: 5px; /* Added slight vertical padding for hover effect */
+    border-radius: 5px; /* Subtle border-radius for the hover background */
+}
+
+.technologies-list li:hover {
+    color: #ffffff; /* Brighter text color on hover */
+    transform: translateX(8px); /* More pronounced shift on hover */
+    background-color: rgba(0, 242, 254, 0.1); /* Light blue tint on hover */
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.2); /* Subtle glow on hover */
+}
+
+.technologies-list li::before {
+    content: '🔹'; /* Changed to a diamond emoji for a modern look */
+    color: #00f2fe; /* Bright blue color for the bullet */
+    font-size: 1.2em; /* Adjusted bullet size */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+}
+
+.technologies-list strong {
+    color: #4facfe; /* Changed to a different blue for a bit more contrast */
+    font-weight: 600;
+}
+
+/* Responsive adjustments for Technologies page */
+@media (max-width: 768px) {
+    .technologies-container {
+        padding: 30px 20px;
+        margin: 50px auto;
+    }
+
+    .technologies-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .technologies-list {
+        font-size: 1rem;
+    }
+
+    .technologies-list li {
+        padding-left: 25px;
+        margin-bottom: 8px;
+    }
+
+    .technologies-list li::before {
+        font-size: 1.1em;
+    }
+}
+/* Login Page Specific Styles - Focused Adjustments */
+
+/* Options Row (Remember me / Forgot password?) */
+.options-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 24px); /* Match input width */
+    max-width: 300px; /* Match input max-width */
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    /* --- FIX FOR THE LONG BOX WITH SHADOW --- */
+    background: transparent !important; /* Forces transparent background */
+    border: none !important; /* Removes any border */
+    box-shadow: none !important; /* Removes any shadow */
+    backdrop-filter: none !important; /* Removes any blur effect */
+    padding: 0 !important; /* Ensures no extra padding contributes to the "box" */
+    /* -------------------------------------- */
+}
+
+/* Remember me Checkbox Styling */
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.remember-me input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.remember-me input[type="checkbox"]:checked {
+    background: #6fb3f9;
+    border-color: #6fb3f9;
+    box-shadow: inset 0 1px 4px rgba(0,0,0,0.3), 0 0 5px rgba(111, 179, 249, 0.4);
+}
+
+.remember-me input[type="checkbox"]:checked::after {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #1d2671;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.forgot-password {
+    color: #8be4f7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #6fb3f9;
+    text-decoration: underline;
+}
+
+/* Sign Up Page Specific Styles - New Additions */
+
+.signup-box {
+    max-width: 400px; /* Consistent width with login box */
+    margin: 100px auto; /* Centered vertically and horizontally */
+    text-align: center; /* Center text within the box */
+    padding: 40px; /* Consistent padding */
+    /* Inherits glass-box styles: background, border-radius, backdrop-filter, box-shadow, border */
+}
+
+.signup-box form {
+    width: 100%; /* Ensure form elements take full width of their parent */
+    align-items: center; /* Center inputs/buttons horizontally */
+    gap: 15px; /* Space between form elements */
+}
+
+/* Reusing general input and button styles, no specific overrides needed unless different */
+.signup-box input[type="email"],
+.signup-box input[type="password"] {
+    width: calc(100% - 24px); /* Match previous login input width */
+    max-width: 300px;
+    margin-bottom: 0; /* Reset margin, rely on form gap */
+    /* Inherits base input styles */
+}
+
+.signup-box button[type="submit"] {
+    width: calc(100% - 24px); /* Match previous login button width */
+    max-width: 300px;
+    margin-top: 10px; /* Add some space above the button */
+    /* Inherits base button styles */
+}
+
+.login-text {
+    margin-top: 20px; /* Space above login link */
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.login-text a {
+    color: #8be4f7; /* Softer blue for link */
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.login-text a:hover {
+    color: #6fb3f9; /* Softer blue on hover */
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness for Sign Up Page */
+@media (max-width: 480px) {
+    .signup-box {
+        padding: 30px 20px;
+    }
+
+    .signup-box input[type="email"],
+    .signup-box input[type="password"],
+    .signup-box button[type="submit"] {
+        width: 100%; /* Full width on small screens */
+        max-width: none;
+    }
+}
+/* Dashboard Page Specific Styles - Refined (Updated) */
+main .dashboard-title { /* Targeted more specifically */
+    color: #ffffff;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+    letter-spacing: 2px;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+main .dashboard-subtitle { /* Targeted more specifically */
+    color: #f1f1f1;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 40px; /* Space between H3 and the cards */
+    max-width: 700px;
+    line-height: 1.5;
+    animation: fadeInText 1.5s ease-out;
+}
+/* How It Works Section Styles */
+.how-it-works-container {
+    max-width: 900px; /* Wider container as seen in image */
+    margin-top: 80px; /* Space from cards above */
+    padding: 40px;
+    /* Inherits glass-box styles for background, border-radius, blur, shadow, border */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content within this container */
+    text-align: center; /* Center text within this container */
+    animation: fadeIn 2s ease-out; /* Add a slight delay/different animation */
+}
+
+.how-it-works-container .section-title {
+    color: #8be4f7; /* Softer blue for title */
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(139, 228, 247, 0.5);
+    letter-spacing: 1px;
+}
+
+.how-it-works-container .section-subtitle {
+    color: #f1f1f1;
+    font-size: 1.2rem;
+    margin-bottom: 40px; /* Space before the grid starts */
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.how-it-works-grid {
+    display: flex;
+    justify-content: space-around; /* Distribute columns with space */
+    width: 100%;
+    gap: 40px; /* Space between the two columns */
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+}
+
+.how-it-works-column {
+    flex: 1; /* Allow columns to grow and shrink */
+    min-width: 280px; /* Minimum width for columns before wrapping */
+    padding: 20px;
+    text-align: left; /* Align text within columns to the left as per image */
+}
+
+.how-it-works-column h3 {
+    color: #8be4f7; /* Softer blue for column subheadings */
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: center; /* Center these titles as per image */
+}
+
+.control-item, .tech-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px; /* Space between items */
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.control-item:hover, .tech-item:hover {
+    background-color: rgba(139, 228, 247, 0.05); /* Very subtle hover background */
+    transform: translateX(5px);
+}
+
+.control-icon {
+    font-size: 2rem;
+    line-height: 1;
+    filter: drop-shadow(0 0 5px rgba(139, 228, 247, 0.2)); /* Reduced shadow intensity */
+}
+
+.control-text h4, .tech-item h4 {
+    color: #ffffff; /* White for the main point */
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.control-text p, .tech-item p {
+    color: #f1f1f1; /* Slightly off-white for description */
+    margin: 5px 0 0 0;
+    font-size: 0.95rem;
+}
+
+/* Special color for the "MediaPipe", "OpenCV", "PyAutoGUI", "Python" words as seen in image */
+.tech-item p {
+    color: #8be4f7; /* Softer blue for these specific tech names */
+    font-weight: 500;
+}
+
+/* Responsive adjustments for New Sections */
+@media (max-width: 768px) {
+    .how-it-works-container {
+        padding: 30px 20px;
+        margin-top: 60px;
+    }
+
+    .how-it-works-container .section-title {
+        font-size: 2.2rem;
+    }
+
+    .how-it-works-container .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .how-it-works-grid {
+        flex-direction: column; /* Stack columns vertically on mobile */
+        gap: 25px;
+    }
+
+    .how-it-works-column {
+        min-width: unset; /* Remove min-width for mobile */
+        width: 100%;
+        padding: 0; /* Adjust padding as columns are stacked */
+    }
+
+    .how-it-works-column h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+}
+/* Demo Page Specific Styles */
+.demo-page-container {
+    max-width: 1200px; /* Wider container for the demo page */
+    margin: 50px auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.demo-live-heading, .tested-games-heading {
+    color: #8be4f7; /* Softer blue */
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 12px rgba(139, 228, 247, 0.5);
+    letter-spacing: 1px;
+    margin-top: 40px; /* Space from top or previous section */
+}
+
+.demo-live-subheading, .tested-games-subheading {
+    color: #f1f1f1;
+    font-size: 1.2rem;
+    margin-bottom: 40px; /* Space before the grid starts */
+}
+
+.demo-section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between cards */
+    width: 100%;
+    margin-bottom: 50px; /* Space below grid */
+}
+
+.demo-game-card {
+    background: rgba(255, 255, 255, 0.08); /* Slightly more opaque glass for cards */
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Pushes content and button apart */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative; /* For badge positioning */
+    min-height: 220px; /* Ensure consistent height for cards */
+}
+
+.demo-game-card:hover {
+    transform: translateY(-8px); /* Lift higher on hover */
+    box-shadow: 0 8px 25px rgba(139, 228, 247, 0.3); /* Enhanced glow on hover */
+}
+
+.demo-game-card h4 {
+    color: #8be4f7; /* Softer blue for game titles */
+    font-size: 1.4rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.demo-game-card p {
+    color: #f1f1f1;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    flex-grow: 1; /* Allow description to take available space */
+    margin-bottom: 20px; /* Space above button */
+}
+
+.demo-game-card .game-icon { /* Specific targeting for icons within demo cards */
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 8px rgba(139, 228, 247, 0.3)); /* Reduced glow for these icons */
+}
+
+/* Tested Badge */
+.tested-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(45deg, #28a745, #218838); /* Green gradient */
+    color: #ffffff;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Source Guide Section */
+.demo-source-guide {
+    margin-top: 60px; /* Space above this section */
+    max-width: 800px;
+    /* Inherits glass-box for background, shadow etc. */
+    padding: 30px 40px; /* Adjust padding */
+}
+
+.source-guide-heading {
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.source-guide-subheading {
+    color: #f1f1f1;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.view-repo-btn {
+    /* Inherits button styles, no specific override needed unless different */
+    font-size: 1.1rem;
+    padding: 12px 30px;
+}
+
+/* Responsive adjustments for Demo page */
+@media (max-width: 768px) {
+    .demo-page-container {
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .demo-live-heading, .tested-games-heading {
+        font-size: 2.2rem;
+    }
+
+    .demo-live-subheading, .tested-games-subheading {
+        font-size: 1rem;
+    }
+
+    .demo-section-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 20px;
+    }
+
+    .demo-game-card {
+        padding: 20px;
+        min-height: unset; /* Allow height to adjust on mobile */
+    }
+
+    .game-icon {
+        font-size: 3rem;
+    }
+
+    .demo-game-card h4 {
+        font-size: 1.2rem;
+    }
+
+    .demo-game-card p {
+        font-size: 0.9rem;
+    }
+
+    .demo-source-guide {
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    .source-guide-heading {
+        font-size: 1.8rem;
+    }
+
+    .source-guide-subheading {
+        font-size: 0.95rem;
+    }
+}
